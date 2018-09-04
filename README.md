@@ -88,5 +88,5 @@ public class EmailClient {
 # Nota
 * 70% da nota será composta da implementação do código e os testes checando se as condições descritas foram corretamente implentadas 
 * 30% da nota será composta pela cobertura proporcional dos seus testes
-    * Exemplo: 100% = 3 ponto, 50% = 1.5 pontos
+    * Exemplo: 100% = 3 pontos, 50% = 1.5 pontos
 * 1 Ponto extra para quem utilizar o padrão Builder para auxiliar nos casos de teste
