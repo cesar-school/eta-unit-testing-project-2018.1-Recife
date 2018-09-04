@@ -65,7 +65,7 @@ public interface EmailService {
         * boolean isValidEmail()
             * É considerado válido o email que possuir um creationDate, um destinatário (to) válido, ao menos um emissor (from) válido e os demais e-mails também sejam válidos
         * Collection\<Email> emailList(EmailAccount account)
-            *Antes de obter emails verificar se password é válido
+            * Antes de obter emails verificar se password é válido
             * Se password inválido levantar uma exeção do tipo `RuntimeException` 
             * Chamar `emailService.emailList(account)`
         * void sendEmail()
