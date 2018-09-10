@@ -3,7 +3,7 @@
 1. Criar classe `Email` que contenha
     1. Atributos:
         * Instant creationDate
-        * Sting from
+        * String from
         * Collection\<String> to
         * Collection\<String> cc
         * Collection\<String> bcc
@@ -59,19 +59,19 @@ public interface EmailService {
         * EmailService emailService
             * Armazena uma instancia de um objeto que implementa a interface `EmailService`
     2. Métodos
-        * void setEmailService()
-        * boolean isValidAddress()
-            * Um endereço é considerado válido se possuir usuário válido, seguido pelo caractere arroba (@) e posteriormente um domínio válido.
-        * boolean isValidEmail()
+        * void setEmailService(**EmailService emailService**)
+        * boolean isValidAddress(**String emailAddress**)
+            * Um endereço é considerado válido se possuir usuário válido, seguido pelo caracterae arroba (@) e posteriormente um domínio válido.
+        * boolean isValidEmail(**Email email**)
             * É considerado válido o email que possuir um creationDate, um destinatário (to) válido, ao menos um emissor (from) válido e os demais e-mails também sejam válidos
         * Collection\<Email> emailList(EmailAccount account)
-            * Antes de obter emails verificar se password é válido
+            * Antes de obter emails verificar se password é válido **(password é valido se maior que 6 caracteres e lastPasswordUpdate menor ou igual a 90 dias)**
             * Se password inválido levantar uma exeção do tipo `RuntimeException` 
             * Chamar `emailService.emailList(account)`
-        * void sendEmail()
+        * void sendEmail(**Email email**)
             * verifica se o email é válido (utilizando o método isValidEmail)
             * chamar emailService.sendEmail(Email email)
-            * Se retorno `false` levantar uma exeção do tipo `RuntimeException
+            * Se retorno `false` levantar uma exeção do tipo `RuntimeException`
         * boolean createAccount(EmailAccount account)
             * verifica se o usuário e o dominio são válidos
             * verifica se o password é maior que 6 caracteres
