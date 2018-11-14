@@ -63,7 +63,7 @@ public interface EmailService {
         * boolean isValidAddress(**String emailAddress**)
             * Um endereço é considerado válido se possuir usuário válido, seguido pelo caracterae arroba (@) e posteriormente um domínio válido.
         * boolean isValidEmail(**Email email**)
-            * É considerado válido o email que possuir um creationDate, um destinatário (to) válido, ao menos um emissor (from) válido e os demais e-mails também sejam válidos
+            * É considerado válido o email que possuir um creationDate, um emissor (from) válido, ao menos um destinatário (to) válido e os demais e-mails também sejam válidos
         * Collection\<Email> emailList(EmailAccount account)
             * Antes de obter emails verificar se password é válido **(password é valido se maior que 6 caracteres e lastPasswordUpdate menor ou igual a 90 dias)**
             * Se password inválido levantar uma exeção do tipo `RuntimeException` 
